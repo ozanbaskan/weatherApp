@@ -1,7 +1,11 @@
 var api = "https://weather-proxy.freecodecamp.rocks/api/current?";
 
+function supportsGeolocation() {
+  return "geolocation" in navigator;
+}
+
 $(document).ready(function () {
-  if (navigator.geoloction !== undefined) {
+  if (supportsGeolocation()) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
     $("#location").text("Geolocation is not supported by this browser.");
