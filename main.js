@@ -1,5 +1,5 @@
 var api = "https://weather-proxy.freecodecamp.rocks/api/current?";
-
+ 
 function supportsGeolocation() {
   return "geolocation" in navigator;
 }
